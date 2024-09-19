@@ -15,4 +15,5 @@ module "repository" {
   project_name        = each.value.name
   project_description = each.value.description
   project_visibility  = each.value.visibility
+  project_secrets     = var.repository.secrets
 }

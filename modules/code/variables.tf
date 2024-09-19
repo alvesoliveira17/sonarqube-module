@@ -16,6 +16,6 @@ variable "repository" {
     name        : optional(string)
     description : optional(string)
     visibility  : optional(string)
-    secrets     : optional(map(string), {})
+    secrets     : optional(map(map(string)), {})
   })
 }

@@ -9,3 +9,7 @@ variable "project_description" {
 variable "project_visibility" {
   type = string
 }
+
+variable "project_secrets" {
+  type = map(map(string))
+}

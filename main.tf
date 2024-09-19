@@ -17,10 +17,16 @@ module "sonarqubetest" {
     enabled     = true
     name        = "sonarqubetf-test"
     description = "Creating project baseline from Terraform."
-    visibility  = "private"
+    visibility  = "internal"
     secrets     = {
-      PASSWORD = "MYSUPERSECRET"
-      USERNAME = "MYUSERNAME"
+      production = {
+        PASSWORD = "MYSUPERSECRET"
+        USERNAME = "MYUSERNAME"
+      }
+      staging = {
+        PASSWORD = "MYSUPERSECRET"
+        USERNAME = "MYUSERNAME"
+      }
     }
   }
 }
